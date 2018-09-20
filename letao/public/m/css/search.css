@@ -1,0 +1,32 @@
+.ltl_search{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+.ltl_search input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #006699;
+    line-height: 28px;
+    background: #fff;
+    font-size: 12px;
+    text-align: left;
+    padding: 0 0 0 10px;
+    border-radius: 15px;
+}
+.ltl_search a{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    display: block;
+    background: #006699;
+    color: #FFFFFF;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+}
+
+/*history*/
