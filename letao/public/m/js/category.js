@@ -9,6 +9,7 @@ $(function () {
 //渲染2级分类
         getCategoryDataSecond({id:categoryId},function (data) {
             $('.cate_right ul').html(template('secondTemplate',data));
+            //console.log(data);
         })
 
     });
