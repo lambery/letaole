@@ -75,7 +75,7 @@
     height: 55px;
     float: left;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 14px;
 }
 .ltl_container .ltl_footer a.now{
     color: orange;
@@ -83,7 +83,7 @@
 .ltl_container .ltl_footer a span{
     display: block;
     font-size: 12px;
-    padding-top: 10px;;
+    padding-top: 5px;;
 }
 
 body{

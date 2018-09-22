@@ -13,9 +13,34 @@ ltl.getParamByUrl=function () {
     return params;
 };
 
+//获取到的表单序列号字符串转对象
+ltl.serialize2object=function (serializeStr) {
+    var obj={};
+    if(serializeStr){
+       var arr=serializeStr.split('&');
+        arr.forEach(function (item,i) {
+           var itemArr=item.split('=');
+            obj[itemArr[0]]=itemArr[1];
+        });
+    }
+    return obj;
+};
+ltl.getItemById=function (arr,$id) {
+    var item=null;
+    arr.forEach(function (data,i) {
+       if(data.id==$id){
+           item=data;
+       }
+    });
+    return item;
+};
+
+
+
 //需要登陆的ajax请求
 ltl.loginUrl='/m/user/login.html';
 ltl.cartUrl='/m/user/cart.html';
+ltl.usertUrl='/m/user/index.html';
 
 
 ltl.loginAjax=function (params) {
