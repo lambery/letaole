@@ -17,35 +17,30 @@
 <div class="ltl_container">
     <header class="ltl_header">
         <a href="javascript: history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
-        <h3>会员中心</h3>
+        <h3>修改地址</h3>
     </header>
     <div class="ltl_content">
         <div class="ltl_wrapper">
 
             <div class="cz_container">
-                <ul class="mui-table-view mui-table-view-chevron">
-                    <li class="mui-table-view-cell mui-media">
-                        <a class="mui-navigate-right" href="#account">
-                            <img class="mui-media-object mui-pull-left head-img" id="head-img" src="../images/user.jpg">
-                            <div class="mui-media-body">
-                                加载中...<p class="mui-ellipsis">绑定手机:加载中...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mui-table-view-cell">
-                        <a href="password.html" class="mui-navigate-right">账号与安全</a>
-                    </li>
-                    <li class="mui-table-view-cell">
-                        <a href="cart.html" class="mui-navigate-right">我的购物车</a>
-                    </li>
-                    <li class="mui-table-view-cell">
-                        <a href="address.html" class="mui-navigate-right" >收货地址管理</a>
-                    </li>
-                </ul>
-                <div class="p20">
-                    <a href="javascript:;" class="mui-btn btn_outLogin">退出登录</a>
+                <div class="form_box">
+                    <div class="mui-input-row">
+                        <input name="recipients" type="text" placeholder="收货人">
+                    </div>
+                    <div class="mui-input-row">
+                        <input name="postCode" type="text" placeholder="邮编">
+                    </div>
+                    <div class="mui-input-row">
+                        <input name="address" type="text"  placeholder="省市区">
+                    </div>
+                    <div class="mui-input-row">
+                        <textarea name="addressDetail" id="textarea" rows="5" placeholder="详细地址"></textarea>
+                    </div>
+                    <a href="javascript:;" class="mui-btn mui-btn-primary btn_submit">确认</a>
+                    <a href="javascript: history.back();" class="mui-btn">取消</a>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -61,6 +56,6 @@
 <script src="../assets/zepto/zepto.min.js"></script>
 <script src="../assets/artTemplate/template-native.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/indexAdmin.js"></script>
+<script src="../js/address.js"></script>
 </body>
 </html>

@@ -64,8 +64,7 @@ $(function () {
                             item.num=num;
                             item.size=size;
                             $('.mui-table-view').html(template('cart',window.cartData));
-
-
+                                            //setAmount();---------------
                         }
 
                     }
@@ -116,6 +115,7 @@ $(function () {
                    success:function (data){
                        if(data.success==true){
                            $this.parent().parent().remove();
+                           setAmount();
                        }
                    }
                })
@@ -148,9 +148,14 @@ var setAmount=function () {
         var price=item.price;
         var amount=price*num;
         amountSum+=amount;
-
     });
-    console.log(amountSum);
+    if(Math.floor(amountSum*100)%10){
+        amountSum=Math.floor(amountSum*100)/100
+    }else{
+        amountSum=Math.floor(amountSum*100)/100;
+        amountSum=amountSum.toString()+'0';
+    }
+    //console.log(amountSum);
     $('#cartAmount').html(amountSum);
 };
 

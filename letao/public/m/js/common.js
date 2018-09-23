@@ -44,12 +44,16 @@ ltl.usertUrl='/m/user/index.html';
 
 
 ltl.loginAjax=function (params) {
+    if(!params.url) return false;
 //params==>{}
     $.ajax({
         type: params.type || 'get',
         url: params.url || '#',
         data: params.data || '',
         dataType: params.dataType || 'json',
+        beforeSend:function(){
+            params.beforeSend && params.beforeSend();
+        },
         success:function (data) {
             //未登陆处理error400
             if(data.error == 400){
