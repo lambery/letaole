@@ -12,7 +12,7 @@ $(function(){
             password:$.trim($('[name=pass]').val()),
             rePass:$.trim($('[name=rePass]').val()),
             vCode:$.trim($('[name=code]').val())
-        }
+        };
 
         if(!data.username){
             mui.toast('请输入手机号');
@@ -83,6 +83,7 @@ $(function(){
                 btn.addClass('btn_disabled').html('正在发送...');
             },
             success:function(data){
+                mui.toast(data.vCode);
                 console.log(data.vCode);
                 var time = 60;
                 btn.html(time+'秒后再获取');
